@@ -1,0 +1,15 @@
+version: '3'
+services:
+
+  vstreaming:
+    image: vstreaming
+    build:
+      context: ./vstreaming
+      dockerfile: Dockerfile
+
+    container_name: vstreaming
+    ports:
+     - "4000:80"
+    environment:
+      - PORT=80
+    restart: "no"
